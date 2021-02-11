@@ -1,13 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package lab.assignment.pkg1;
 
 /**
  * Just working through Git first.
- * @author Sammi
+ * @author Sammi 2/10/2021
  */
 public class LabAssignment1 {
 
@@ -15,8 +11,13 @@ public class LabAssignment1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("Hello");
+         for (int i = 0; i <= 20;) {
+            if (i % 2 != 1) {
+                System.out.println(i);
+            }
+            i++;
+        }
+        
     }
     
 }
