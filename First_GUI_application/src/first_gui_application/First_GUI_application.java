@@ -20,7 +20,7 @@ public class First_GUI_application extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         
-        Button btn1 = new Button("click me");
+
         
         
         Rectangle rect = new Rectangle(0,0,500,225);//the split for the backgorund
@@ -35,12 +35,12 @@ public class First_GUI_application extends Application {
         Line line2 = new Line(50,125, 250,0);
         Line line3 = new Line(250,0, 450,125);// these three lnes make the roof of the house.
         
-        Rectangle gbox = new Rectangle(220,175,60,30);//gray box
+        Rectangle gbox = new Rectangle(230,175,40,30);//gray box
         Rectangle p1 = new Rectangle(83,150,25,180);//first pillar
         p1.setFill(Color.WHITE);
-        Rectangle p2 =  new Rectangle(164,150,25,180);//second pillar
+        Rectangle p2 =  new Rectangle(179,150,25,180);//second pillar
         p2.setFill(Color.WHITE);
-        Rectangle p3 =  new Rectangle(314,150,25,180);//third pillar
+        Rectangle p3 =  new Rectangle(297,150,25,180);//third pillar
         p3.setFill(Color.WHITE);
         Rectangle p4 =  new Rectangle(392,150,25,180);//fourth pillar
         p4.setFill(Color.WHITE);
@@ -48,9 +48,9 @@ public class First_GUI_application extends Application {
         
         Rectangle bp1 = new Rectangle(77,328,40,10);//bottom of the first pillar
         bp1.setFill(Color.WHITE);
-        Rectangle bp2 =  new Rectangle(157,327,40,10);//bottom of the second pillar
+        Rectangle bp2 =  new Rectangle(172,327,40,10);//bottom of the second pillar
         bp2.setFill(Color.WHITE);
-        Rectangle bp3 =  new Rectangle(307,327,40,10);//bottom of the third pillar
+        Rectangle bp3 =  new Rectangle(290,327,40,10);//bottom of the third pillar
         bp3.setFill(Color.WHITE);
         Rectangle bp4 =  new Rectangle(385,328,40,10);// bottom of the fourth pillar
         bp4.setFill(Color.WHITE);
@@ -60,9 +60,35 @@ public class First_GUI_application extends Application {
         lbox.setFill(Color.LIGHTGRAY);
         rbox.setFill(Color.LIGHTGRAY);
         
-        Rectangle middoor = new Rectangle();
+        Rectangle middoor = new Rectangle(230,230,40,107);//center door
+        middoor.setFill(Color.WHITE);
+        Rectangle leftdoor = new Rectangle(125,245,40,92);//left door
+        leftdoor.setFill(Color.WHITE);
+        Rectangle rightdoor = new Rectangle(337,245,40,92);//left door
+        rightdoor.setFill(Color.WHITE);
+        
+        Circle circle1 = new Circle(83,160,9);//first pillar's two circles
+        circle1.setFill(Color.NAVAJOWHITE);
+        Circle circle2 = new Circle(108,160,9);
+        circle2.setFill(Color.NAVAJOWHITE);
+        
+        Circle circle3 = new Circle(179,160,9);//second pillar's two circles
+        circle3.setFill(Color.NAVAJOWHITE);
+        Circle circle4 = new Circle(204,160,9);
+        circle4.setFill(Color.NAVAJOWHITE);
+        
+        Circle circle5 = new Circle(297,160,9);//third pillar's two circles
+        circle5.setFill(Color.NAVAJOWHITE);
+        Circle circle6 = new Circle(322,160,9);
+        circle6.setFill(Color.NAVAJOWHITE);
+        
+        Circle circle7 = new Circle(392,160,9);//fourth pillar's two circles
+        circle7.setFill(Color.NAVAJOWHITE);
+        Circle circle8 = new Circle(417,160,9);
+        circle8.setFill(Color.NAVAJOWHITE);
        
-        Group gp = new Group(rect, rect2,rect3, line1,line2,line3, gbox,p1,p2,p3,p4, lbox,rbox,bp1,bp2,bp3,bp4);
+        Group gp = new Group(rect, rect2,rect3, line1,line2,line3, gbox,p1,p2,p3,p4, lbox,rbox,bp1,bp2,bp3,bp4,
+                                middoor,leftdoor,rightdoor, circle1,circle2,circle3,circle4,circle5,circle6,circle7,circle8);
          int size=11,stp= 7;
         Line[] lns = new Line[size];
         Line[] lns2 = new Line[size];
