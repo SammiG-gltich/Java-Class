@@ -88,6 +88,7 @@ public class LayoutGUIController {
         case "8": txt1.setText(txt1.getText() + "8"); break;
         case "9": txt1.setText(txt1.getText() + "9"); break;
         case "0": txt1.setText(txt1.getText() + "0"); break;
+        case "clear": txt1.setText(""); break;
     }
     }
 
@@ -123,7 +124,7 @@ public class LayoutGUIController {
             }
         }else if(((Button)event.getSource()).getText().equals("%")){
             if(crrntArthOp.equals("Default")){
-                opd2 = txt1.getText();
+                opd1 = txt1.getText();
                 crrntArthOp = "Percent";
                 txt1.clear();
             }
@@ -136,7 +137,6 @@ public class LayoutGUIController {
         
         int num1 = Integer.parseInt(opd1);
         int num2 = Integer.parseInt(txt1.getText());
-        int num3 = Integer.parseInt(opd2);
         
         if(crrntArthOp.equals("Add")){
             txt1.setText(""+ (num1+num2));
@@ -151,7 +151,7 @@ public class LayoutGUIController {
             txt1.setText(""+ (num1-num2));
             
         }else if (crrntArthOp.equals("Percent")){
-            txt1.setText(""+ (num3 * (1/100)));
+            txt1.setText(""+ (num1/num2*100));
             
         }
     }
@@ -160,18 +160,6 @@ public class LayoutGUIController {
     void findOpposite(ActionEvent event) {
 
     }
-    
-    @FXML
-    void clearHouse(ActionEvent event) {
-
-    }
-    
-    @FXML
-    void percentConvert(ActionEvent event){
-    
-
-    }
-    
     
      @FXML
     void deleteOne(ActionEvent event){
